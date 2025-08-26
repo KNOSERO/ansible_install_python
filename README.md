@@ -9,4 +9,8 @@ Script for installing python in Ansible
   become: true
   vars:
     python_version: "3.11" 
+
+  tasks:
+    - name: Install Terraform
+      include_tasks: ./task/ansible_install_python/playbook.yml 
 ```
