@@ -1,6 +1,10 @@
+- name: Add deadsnakes PPA
+  apt_repository:
+    repo: ppa:deadsnakes/ppa
+    state: present
+
 - name: Install Python
   raw: |
     apt-get update -y && \
     apt-get install -y python{{ python_version }} \
-    python{{ python_version }}-venv \
-    python{{ python_version }}-distutils
+    python{{ python_version }}-venv
